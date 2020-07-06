@@ -1,3 +1,5 @@
+const path = require('path');
+
 
 module.exports = {
   /* Your site config here */
@@ -5,22 +7,23 @@ module.exports = {
    {
      resolve: `gatsby-source-filesystem`,
      options: {
+     
        name: `pages`,
-       path: `${__dirname/src/pages}`
+       path: `${__dirname}/src/pages`,
      },
    },
    {
     resolve: `gatsby-source-filesystem`,
     options: {
+      path: `${__dirname}/src/posts`,
       name: `posts`,
-      path: `${__dirname/src/posts}`
     },
   },
   {
     resolve: `gatsby-source-filesystem`,
     options: {
+      path: `${__dirname}/src/pages`,
       name: `images`,
-      path: `${__dirname/src/pages}`
     },
   },
    `gatsby-plugin-sharp`,
